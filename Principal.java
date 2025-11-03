@@ -10,7 +10,21 @@ public class Principal {
         meuFilme.setAnoLancamento(1970);
         meuFilme.setIncluidoNoPlano(true);
         meuFilme.setDuracaoEmMinutos(180);
-        
+
+        Filme outroFilme = new Filme();
+
+        outroFilme.setTitulo("Avatar");
+        outroFilme.setAnoLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+
+        Serie Lost = new Serie();
+
+        Lost.setTitulo("Lost");
+        Lost.setAnoLancamento(2000);
+        Lost.setTemporadas(6);
+        Lost.setEpisodiosPorTemporada(17);
+        Lost.setMinutosPorEpisodio(45);
+            
       
 
         meuFilme.exibeFichaTecnica();
@@ -21,30 +35,19 @@ public class Principal {
         System.out.println("A soma das avaliações é: " + meuFilme.getSomaAvaliacao());
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("A média das avaliações é: " + meuFilme.mediaAvaliacoes());
-
-        Serie Lost = new Serie();
-        Lost.setTitulo("Lost");
-        Lost.setAnoLancamento(2000);
-        Lost.setTemporadas(6);
-        Lost.setEpisodiosPorTemporada(17);
-        Lost.setMinutosPorEpisodio(45);
+  
 
         Lost.exibeFichaTecnica();
 
         System.out.println("Tempo para maratonar Lost: " + Lost.getDuracaoEmMinutos() + " minutos");
 
-       CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
-       calculadora.inclui(meuFilme);
-       System.out.println("Tempo total de visualização: " + calculadora.getTempoTotal() + " minutos");
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+       
+        
 
-       Filme outroFilme = new Filme();
-
-        outroFilme.setTitulo("O poderoso chefão");
-        outroFilme.setAnoLancamento(1970);
-        outroFilme.setIncluidoNoPlano(true);
-        outroFilme.setDuracaoEmMinutos(180);
-
+        calculadora.inclui(meuFilme);
         calculadora.inclui(outroFilme);
+        calculadora.inclui(Lost);
         System.out.println("Tempo total de visualização: " + calculadora.getTempoTotal() + " minutos");
 
     }
