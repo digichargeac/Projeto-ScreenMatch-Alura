@@ -35,6 +35,17 @@ public class Principal {
 
        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
        calculadora.inclui(meuFilme);
+       System.out.println("Tempo total de visualização: " + calculadora.getTempoTotal() + " minutos");
+
+       Filme outroFilme = new Filme();
+
+        outroFilme.setTitulo("O poderoso chefão");
+        outroFilme.setAnoLancamento(1970);
+        outroFilme.setIncluidoNoPlano(true);
+        outroFilme.setDuracaoEmMinutos(180);
+
+        calculadora.inclui(outroFilme);
+        System.out.println("Tempo total de visualização: " + calculadora.getTempoTotal() + " minutos");
 
     }
 }

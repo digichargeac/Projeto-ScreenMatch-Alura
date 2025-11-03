@@ -1,5 +1,3 @@
-package br.com.alura.ScreenMatch.calculos;
-
 public class CalculadoraDeTempo {
     private int tempoTotal;
 
