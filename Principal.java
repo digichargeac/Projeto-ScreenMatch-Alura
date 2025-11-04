@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import br.com.alura.ScreenMatch.calculos.CalculadoraDeTempo;
 import br.com.alura.Screenmatch.modelos.Filme;
 
@@ -59,6 +61,22 @@ public class Principal {
         episodio.setSerie(Lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filmeDoPaulo = new Filme();
+        filmeDoPaulo.setTitulo("Dogville");
+        filmeDoPaulo.setAnoLancamento(2003);
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoPaulo);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("O primeiro filme da minha lista é: " + listaDeFilmes.get(0).getTitulo());
+        System.out.println(listaDeFilmes);
+
+        
 
     }
 }

@@ -14,6 +14,12 @@ public class Filme extends Titulo implements Classificavel {
         return (int) mediaAvaliacoes() / 2;
     }
 
+    @Override
+    public String toString() {
+        return "Filme: " + this.getTitulo() + " (" + this.getAnoLancamento() + ")";
+    }
+    
+
 
 
 }
