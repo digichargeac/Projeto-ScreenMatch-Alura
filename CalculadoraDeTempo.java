@@ -5,13 +5,18 @@ public class CalculadoraDeTempo {
         return this.tempoTotal;
     }
 
-    public void inclui(Filme f) {
-        tempoTotal += f.getDuracaoEmMinutos();
+    // public void inclui(Filme f) {
+    //     tempoTotal += f.getDuracaoEmMinutos();
     
-    }
+    // }
 
-    public void inclui(Serie s) {
-        this.tempoTotal += s.getDuracaoEmMinutos();
+    // public void inclui(Serie s) {
+    //     this.tempoTotal += s.getDuracaoEmMinutos();
+    
+    // }
+
+    public void inclui(Titulo t) {
+        this.tempoTotal += t.getDuracaoEmMinutos();
     
     }
 

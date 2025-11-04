@@ -50,5 +50,15 @@ public class Principal {
         calculadora.inclui(Lost);
         System.out.println("Tempo total de visualização: " + calculadora.getTempoTotal() + " minutos");
 
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNome("Pilot");
+        episodio.setNumero(1);
+        episodio.setSerie(Lost);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio);
+
     }
 }
