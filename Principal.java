@@ -6,23 +6,16 @@ import br.com.alura.Screenmatch.modelos.Filme;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
 
-        meuFilme.setTitulo("O poderoso chefão");
-        meuFilme.setAnoLancamento(1970);
         meuFilme.setIncluidoNoPlano(true);
         meuFilme.setDuracaoEmMinutos(180);
 
-        Filme outroFilme = new Filme();
-
-        outroFilme.setTitulo("Avatar");
-        outroFilme.setAnoLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(200);
 
-        Serie Lost = new Serie();
+        Serie Lost = new Serie("Lost", 2000);
 
-        Lost.setTitulo("Lost");
-        Lost.setAnoLancamento(2000);
         Lost.setTemporadas(6);
         Lost.setEpisodiosPorTemporada(17);
         Lost.setMinutosPorEpisodio(45);
@@ -62,9 +55,7 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoPaulo = new Filme();
-        filmeDoPaulo.setTitulo("Dogville");
-        filmeDoPaulo.setAnoLancamento(2003);
+        var filmeDoPaulo = new Filme("Dogville", 2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.avalia(10);
 

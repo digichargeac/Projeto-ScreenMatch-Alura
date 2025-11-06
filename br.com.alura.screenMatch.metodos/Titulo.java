@@ -88,4 +88,12 @@ public class Titulo {
     public double getMediaAvaliacoes() {
         return mediaAvaliacoes;
     }
+
+
+    public Titulo(String titulo, int anoLancamento) {
+        this.titulo = titulo;
+        this.anoLancamento = anoLancamento;
+    }
+
+    
 }

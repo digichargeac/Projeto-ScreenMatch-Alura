@@ -34,6 +34,11 @@ public class Serie extends Titulo {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
 
+    public Serie(String titulo, int anoLancamento) {
+        super(titulo, anoLancamento);
+    }
+
+
 
 
 }
